@@ -1,57 +1,123 @@
-<div style="overflow:auto">
-    <table border="0" width="100%">
-        <tr>
-    
-            <td valign="top">
-                <ul>
-                    <li><a href="/Kanbas/Account/Profile/screen.html">Account</a></li>
-                    <li><a href="/Kanbas/Dashboard">Dashboard</a></li>
-                    <li><a href="/Kanbas/Courses/Home/screen.html">Courses</a></li>
-                    <li><a href="/Kanbas/Calendar">Calendar</a></li>
-                    <li><a href="/Kanbas/Inbox">Inbox</a></li>
-                    <li><a href="/Kanbas/History">History</a></li>
-                    <li><a href="/Kanbas/Studio">Studio</a></li>
-                    <li><a href="/Kanbas/Groups">Groups</a></li>
-                    <li><a href="/Kanbas/Help">Help</a></li>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/lib/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="../../kanbas.css">
+    <link rel="stylesheet" href="/Kanbas/KanbasNavigation/index.css">
+    <link rel="stylesheet" href="/Kanbas/Courses/CourseNavigation/index.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-1 col1-width d-none d-sm-block">
+                <ul class="nav nav-tabs nav-justified flex-column kanbas-sidebar bg-black">
+                    <li><img src="../../../images/logo.jpg" alt="logo"></li>
+                    <li class="nav-item"><a class="nav-link" href="/Kanbas/Account/Profile/screen.html">
+                            <span class="fa-stack fa-1x">
+                                <i class="fa fa-circle fa-stack-2x" id="user1"></i>
+                                <i class="fa fa-user fa-stack-1x fa-inverse" id="user2"></i>
+                            </span>
+                            <br />Account</a></li>
+
+                    <li class="nav-item"><a class="nav-link" href="/Kanbas/Dashboard/screen.html">
+                            <i class="fa fa-tachometer fa-2x"></i>
+                            <br />Dashboard</a></li>
+
+                    <li class="nav-item"><a class="nav-link" href="/Kanbas/Courses/Home/screen.html">
+                            <i class="fa fa-book fa-2x"></i>
+                            <br />Courses</a></li>
+
+                    <li class="nav-item"><a class="nav-link" href="#">
+                            <i class="fa fa-calendar fa-2x"></i>
+                            <br />Calendar</a></li>
+
+                    <li class="nav-item"><a class="nav-link" href="#">
+                            <i class="fa fa-inbox fa-2x"></i>
+                            <br />Inbox</a></li>
+
+                    <li class="nav-item"><a class="nav-link" href="#">
+                            <i class="fa fa-clock-o fa-2x"></i>
+                            <br />History</a></li>
+
+                    <li class="nav-item"><a class="nav-link" href="#">
+                            <i class="fa fa-desktop fa-2x"></i>
+                            <br />Studio</a></li>
+
+                    <li class="nav-item"><a class="nav-link" href="#">
+                            <i class="fa fa-solid fa-arrow-circle-right fa-2x"></i>
+                            <br />Commons</a></li>
+
+                    <li class="nav-item"><a class="nav-link" href="#">
+                            <i class="fa fa-solid fa-question-circle fa-2x"></i>
+                            <br />Help</a></li>
+                    <li class="nav-item bg-black"><a class="nav-link disabled" href="#"></a></li>
+                    <li class="nav-item bg-black"><a class="nav-link disabled" href="#"></a></li>
+                    <li class="nav-item bg-black"><a class="nav-link disabled" href="#"></a></li>
+                    <li class="nav-item "><a class="nav-link disabled" href="#"></a></li>
                 </ul>
-            </td>
-    
-            <td valign="top">
-                <ul>
-                    <li><a href="#">Notification</a></li>
-                    <li><a href="#">Profile</a></li>
-                    <li><a href="/Kanbas/Courses/Files">Files</a></li>
-                    <li><a href="/Kanbas/Courses/Settings">Settings</a></li>
-                    <li><a href="#">ePortfolios</a></li>
-                    <li><a href="#">Shared Content</a></li>
-                    <li><a href="#">The Hub</a></li>
-                    <li><a href="#">Quickly Course Tools</a></li>
-                    <li><a href="#">Global Announcements</a></li>  
-                    
+            </div>
+
+            <div class="col-1 col2-width d-none d-sm-block">
+                <ul class="nav flex-column account-sidebar mt-4 account-width">
+                    <li class="nav-item">
+                        <a class="nav-link" href="">
+                            Notifications
+                        </a>
+                    </li>
+
+                    <li class="nav-item"><a class="nav-link active"
+                            href="/Kanbas/Account/Profile/screen.html">Profile</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Files</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Settings</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">ePortfolios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Shared Content</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">The Hub</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Qwickly Course <br />Tools</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Global <br />Announcements</a></li>
                 </ul>
-            </td>
-    
-            <td valign="top">
-                <label>Jose Annunziato's Profile</label>
-                <hr/>
-                <h3>Jose Annunziato
-                </h3>
-                <form action="/Kanbas/Account/Profile/EditProfile/screen.html">
-                    <button type="submit">Edit Profile</button>
-                </form>
+            </div>
 
-                <h4>Contact</h4>
-                <p>No registered services, you can add some on the <a href="/Kanbas/Courses/Settings" style="text-decoration: none;">settings</a>
-                    page.</p>
+            <div class="col">
+                <p>Jose Annunziato's Profile</p>
+                <hr style="color: rgb(205, 201, 201)">
 
-                <h4>Biography</h4>
-                <p>Faculty, Software Engineer, AI, Space, and renewables ethusiast.</p>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-5">
+                            <i class="fa fa-user-circle" style="color: rgb(154, 156, 158); font-size: 100px;"></i>
+                            <br>
+                            <p style="font-size: 30px">Jose Annunziato</p>
+                            <p style="font-size: 23px">Contact</p>
+                            <p>No registered services, you can add some on the 
+                                <a href="/Kanbas/Courses/Settings/CourseDetails/screen.html" style="text-decoration: none;">Settings</a> 
+                                page.
+                            </p>
+                            <p style="font-size: 23px">Biography</p>
+                            <p>Faculty, Software Engineer, AI, Space, and renewables enthusiast.</p>
+                            <p style="font-size: 23px">Links</p>
+                            <p><a href="https://www.youtube.com/watch?v=YzZz16Gtfdc"
+                                    style="text-decoration: none;">YouTube</a></p>
+                        </div>
 
-                <h4>Links</h4>
-                <a href="#" style="text-decoration: none;">Youtube</a>
-                
-            </td>
-    
-        </tr>
-      </table>
+                        <div class="col-7">
+                            <form action="/Kanbas/Account/Profile/EditProfile/screen.html">
+                                <button class="btn btn-light float-end">
+                                    <i class="fa fa-pencil" style="color: rgb(108, 110, 113);"></i>
+                                    Edit Profile
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+</body>
+
+</html>

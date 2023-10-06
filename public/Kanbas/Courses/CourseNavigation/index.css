@@ -1,0 +1,51 @@
+.account-width {
+    width: 190px;
+    padding-left: 20px;
+}
+
+.account-sidebar a.nav-link {
+    font-size: 15px;
+    padding: 0px;
+    color: rgb(197, 37, 37);
+    text-decoration: none;
+    text-align: left;
+    white-space: wrap;
+    margin-bottom: 15px;
+}
+
+.account-sidebar .nav-link.active {
+    color: black;
+    border-left: 3px solid black;
+    padding-left: 8px;
+}
+
+/* .wd-course-navigation {
+    background-color: white;
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    width: 120px;
+    margin-left: 20px;
+}
+
+.wd-course-navigation li {
+    padding-left: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.wd-course-navigation li a {
+    text-decoration: none;
+    color: rgb(180, 34, 34);
+}
+
+.wd-course-navigation li.wd-active {
+    border-left: 3px solid black;
+    text-decoration: none;
+}
+
+.wd-course-navigation li.wd-active a {
+    color: black;
+} */

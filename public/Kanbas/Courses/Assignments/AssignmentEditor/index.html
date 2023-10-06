@@ -1,95 +1,156 @@
-<select>
-    <option>Edit</option>
-    <option selected>Speed Grader</option>
-    <option>Duplicate</option>
-    <option>Delete</option>
-    <option>Move to...</option>
-    <option>Send to...</option>
-    <option>Copy to...</option>
-    <option>Share to Commons</option>
-</select>
-<hr/>
-<h3>Assignment Name</h3>
-<input
-  type="text"
-  value="A1 - ENV + HTML"
-  id="assignmentName"
-  placeholder="Assignment Name"
-/><br/><br/>
+<!DOCTYPE html>
+<html lang="en">
 
-<textarea cols="50" rows="5">
-This is the first assignment to build Kanbas
-</textarea><br/><br/>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/lib/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="../../../kanbas.css">
+    <link rel="stylesheet" href="/Kanbas/KanbasNavigation/index.css">
+    <link rel="stylesheet" href="/Kanbas/Courses/CourseNavigation/index.css">
+</head>
 
-<label>Points</label><br/>
-<input value="100" type="number" max="100" min="50" step="5" /><br/><br/>
+<body>
+    <div class="col">
+        <input class="form-control w-25" style="display: inline;" type="text" placeholder="Search for Assignments" />
+        <div class="d-flex flex-nowrap float-end align-items-center">
+            <i class="fa fa-check-circle me-1" aria-hidden="true" style="color: rgba(35, 155, 24, 0.905);">
+            </i>
+            <span class="fw-semibold me-4" style="color: rgba(35, 155, 24, 0.905);">
+                Published
+            </span>
+            <div class="dropdown">
+                <button class="btn btn-cos-sandwhich " style="width: 30px;" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Edit Assignment Dates</a></li>
+                </ul>
+            </div>
+        </div>
+        <hr style="color: rgb(217, 219, 221);" />
 
-<label>Assignment Group</label><br/>
-<select>
-    <option>
-        ASSIGNMENTS
-    </option>
-</select><br/><br/>
+        <div class="mb-3">
+            <label for="assigmentName" class="form-label">Assignment Name</label>
+            <input type="text" class="form-control" value="Assignment 1 - HTML" id="assigmentName"
+                placeholder="Assignment Name">
+        </div>
+        <div class="mb-3">
+            <textarea class="form-control" rows="4">This assignment describes how to install the development environment for creating andworking with Web applications we will be developing this semester. We will add newcontent every week, pushing the code to a GitHub source repository, and then deployingthe content to a remote server hosted on Netlify.
+        </textarea>
+        </div>
 
-<label>Display Grade as</label><br/>
-<select>
-    <option>
-        Percentage
-    </option>
-</select><br/><br/>
+        <div class="row">
+            <div class="col-3">
+                <div class="text-end mb-4">
+                    <label for="points" class="form-label me-4">Points</label>
+                </div>
+                <div class="text-end mb-4">
+                    <label for="assigmentGroups" class="form-label me-4">Assignment Group</label>
+                </div>
+                <div class="text-end mb-4">
+                    <label for="displayGrades" class="form-label me-4">Display Grade as</label>
+                </div>
+                <div class="text-end mb-4">
+                    <label class="form-label me-4">Submmision Type</label>
+                </div>
+            </div>
 
-<label>Submission Type</label><br/>
-<select>
-    <option>
-        Online
-    </option>
-</select><br/><br/>
+            <div class="col">
+                <input type="number" class="form-control w-50 mb-3" id="points" value="100">
+                <select class="form-select mb-3" aria-label="Default select example" id="assigmentGroups">
+                    <option selected>ASSIGNMENTS</option>
+                </select>
+                <select class="form-select mb-3" aria-label="Default select example" id="displayGrades">
+                    <option selected>Percentage</option>
+                </select>
+                <div class="border border-secondary-subtle mb-3 p-3 w-50">
+                    <select class="form-select mb-3 w-50" aria-label="Default select example">
+                        <option selected>Online</option>
+                    </select>
+                    <h6>Online Entry Options</h6>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="textEntry">
+                        <label class="form-check-label" for="textEntry">
+                            Text Entry
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="websiteURL">
+                        <label class="form-check-label" for="websiteURL">
+                            Website URL
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="mediaRecording">
+                        <label class="form-check-label" for="mediaRecording">
+                            Media Recording
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="studentAnnotation">
+                        <label class="form-check-label" for="studentAnnotation">
+                            Student Annotation
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="fileUploads">
+                        <label class="form-check-label" for="fileUploads">
+                            File Uploads
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="restrictedUploadFileTypes">
+                        <label class="form-check-label" for="restrictedUploadFileTypes">
+                            Restricted Upload File Types
+                        </label>
+                    </div>
+                </div>
 
-<label>Online Entry Options</label><br/>
-    <input type="checkbox" id="textEntry" />
-    <label for="textEntry">Text Entry</label><br />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3">
+                <div class="text-end mb-4"><label class="form-label me-4">Assign</label></div>
+            </div>
+            <div class="col">
+                <div class="border border-secondary-subtle p-3 mb-0 w-50">
+                    <h6><label class="form-label" for="assignTo"> Assign To</label></h6>
+                    <input type="text" class="form-control" id="assignTo" placeholder="Everyone">
+                    <h6><label class="form-label mt-3" for="due">Due</label></h6>
+                    <input type="date" class="form-control" id="due" value="Oct 01,2023,11:59 PM">
+                    <div class="row">
+                        <div class="col-6">
+                            <h6><label class="form-label mt-3" for="avalable">Available from</label>
+                            </h6>
+                            <input type="date" class="form-control" id="avalable" name="Oct 01,2023,11:59 PM">
+                        </div>
+                        <div class="col-6">
+                            <h6><label class="form-label mt-3" for="until">Until</label></h6>
+                            <input type="date" class="form-control" id="until" name="Oct 01,2023,11:59 PM">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-50 bg-secondary d-flex justify-content-center align-items-center" style="height: 35px;"><i
+                        class="fa fa-plus me-1"></i>Add</div>
+            </div>
+        </div>
+        <hr style="color: rgb(210, 212, 213);" />
+        <div class="d-flex float-start">
+            <input type="checkbox" class="form-check me-1" id="notifyUsers">
+            <label class="form-label" for="notifyUsers">Notify users that this content has
+                changed</label>
+        </div>
+        <div class=" d-flex float-end">
+            <form action="/Kanbas/Courses/Assignments/screen.html">
+                <button class="btn btn-secondary">Cancel</button>
+                <button class="btn btn-danger">Save</button>
+            </form>
+        </div>
+        <br />
+        <br>
 
-    <input type="checkbox" checked /> 
-    <label for="websiteURL">Website URL</label><br />
-    
-    <input type="checkbox" />Media Recordings</label><br />
-
-    <input type="checkbox" />Student Annotation</label><br />
-    
-    <input type="checkbox" />File Uploads</label><br /><br/>
-
-<label>Submission Attempts</label><br/>
-<select>
-    <option>
-        Unlimited
-    </option>
-</select><br/><br/>
-
-<label>Plagiarism Review</label><br/>
-<select>
-    <option>
-        None
-    </option>
-</select><br/><br/>
-
-<label>Group Assignment</label><br/>
-<input type="checkbox" />This is a group assignment</label><br /><br/>
-
-<label>Peer Reviews</label><br/>
-<input type="checkbox" />Require Peer Reviews</label><br /><br/>
-
-<label>Assign</label><br/>
-<label>Assign to</label><br/>
-<input type="text" value="Everyone" placeholder="Type name"/><br /><br/>
-
-<label>Due</label><br />
-<input type="date" value="2021-01-01"/><br /><br/>
-
-<label>Available from</label><br />
-<input type="date" value="2021-01-01"/><br /><br/>
-
-<label>Until</label><br />
-<input type="date" value="2021-01-01"/><br /><br/>
-
-<button onclick="location.href='/Kanbas/Courses/Assignments/screen.html'">Cancel</button>
-<button onclick="location.href='/Kanbas/Courses/Assignments/screen.html'">Save</button>
+</body>
