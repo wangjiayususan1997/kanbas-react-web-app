@@ -23,7 +23,6 @@ function Grades() {
               <th>{assignment.title}</th>
             ))}
           </thead>
-
           <tbody>
             {enrollments.map((enrollment) => {
               const user = db.users.find(
