@@ -1,17 +1,12 @@
 .nav-item i {
-    color: rgb(196, 20, 20);
+  color: rgb(196, 20, 20);
 }
 
-.nav-item i.fa-circle#user1{
-    color: gray;
-    font-size: 2.1rem
-}
-
-.nav-item i.fa-user#user2{
-    color: white;
-    font-size: 1.6rem
+.nav-item i.fa-user-circle-o {
+  color: rgb(203, 197, 197);
+  font-size: 2.1rem;
 }
 
 .nav-item a.nav-link {
-    color: white;
+  color: white;
 }

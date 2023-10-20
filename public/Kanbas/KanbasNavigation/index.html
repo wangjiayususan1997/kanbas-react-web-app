@@ -1,83 +1,20 @@
-<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.css">
-<link rel="stylesheet" href="/lib/bootstrap/bootstrap.min.css">
-<link rel="stylesheet" href="../kanbas.css">
-<link rel="stylesheet" href="index.css">
-
-<ul class="nav nav-tabs nav-justified flex-column kanbas-sidebar bg-black">
-    <li><img src="../../../images/logo.jpg" alt="logo"></li>
-    <li class="nav-item"><a class="nav-link" href="/Kanbas/Account/Profile/screen.html">
-            <span class="fa-stack fa-1x">
-                <i class="fa fa-circle fa-stack-2x" id="user1"></i>
-                <i class="fa fa-user fa-stack-1x fa-inverse" id="user2"></i>
-            </span>
-            <br />Account</a></li>
-
-    <li class="nav-item"><a class="nav-link" href="/Kanbas/Dashboard/screen.html">
-            <i class="fa fa-tachometer fa-2x"></i>
-            <br />Dashboard</a></li>
-
-    <li class="nav-item"><a class="nav-link" href="/Kanbas/Courses/Home/screen.html">
-            <i class="fa fa-book fa-2x"></i>
-            <br />Courses</a></li>
-
-    <li class="nav-item"><a class="nav-link" href="#">
-            <i class="fa fa-calendar fa-2x"></i>
-            <br />Calendar</a></li>
-
-    <li class="nav-item"><a class="nav-link" href="#">
-            <i class="fa fa-inbox fa-2x"></i>
-            <br />Inbox</a></li>
-
-    <li class="nav-item"><a class="nav-link" href="#">
-            <i class="fa fa-clock-o fa-2x"></i>
-            <br />History</a></li>
-
-    <li class="nav-item"><a class="nav-link" href="#">
-            <i class="fa fa-desktop fa-2x"></i>
-            <br />Studio</a></li>
-
-    <li class="nav-item"><a class="nav-link" href="#">
-            <i class="fa fa-solid fa-arrow-circle-right fa-2x"></i>
-            <br />Commons</a></li>
-
-    <li class="nav-item"><a class="nav-link" href="#">
-            <i class="fa fa-solid fa-question-circle fa-2x"></i>
-            <br />Help</a></li>
-    <li class="nav-item bg-black"><a class="nav-link disabled" href="#"></a></li>
-    <li class="nav-item bg-black"><a class="nav-link disabled" href="#"></a></li>
-    <li class="nav-item bg-black"><a class="nav-link disabled" href="#"></a></li>
-    <li class="nav-item "><a class="nav-link disabled" href="#"></a></li>
-</ul>
-
-<!-- <ul class="wd-kanbas-navigation">
-    <li><a href="/Kanbas/Account/Profile/screen.html">Account</a></li>
-    <li class="wd-active"><a href="/Kanbas/Dashboard">
-        <i class="fa fa-tachometer" aria-hidden="true"></i>
-        Dashboard</a></li>
-    <li><a href="/Kanbas/Courses/Home/screen.html">Courses</a></li>
-    <li><a href="/Kanbas/Groups">Groups</a></li>
-    <li><a href="/Kanbas/Calendar">
-        <i class="fa fa-calendar" aria-hidden="true"></i>
-        Calendar</a></li>
-    <li><a href="/Kanbas/Inbox">Inbox</a></li>
-    <li><a href="/Kanbas/History">History</a></li>
-    <li><a href="/Kanbas/Studio">Studio</a></li>
-    <li><a href="/Kanbas/Help">Help</a></li>
-</ul> -->
-
-<!-- <div class="list-group text-center">
-    <a href="/Kanbas/Account/Profile/screen.html" class="list-group-item list-group-item-action">Account</a>
-  
-    <a href="/Kanbas/Dashboard" class="list-group-item list-group-item-action">
-        <i class="fa fa-tachometer" aria-hidden="true"></i>
-        Dashboard</a>
-    <a href="/Kanbas/Courses/Home/screen.html" class="list-group-item list-group-item-action">Courses</a>
-    <a href="/Kanbas/Groups" class="list-group-item list-group-item-action">Groups</a>
-    <a href="/Kanbas/Calendar" class="list-group-item list-group-item-action">
-        <i class="fa fa-calendar" aria-hidden="true"></i>
-        Calendar</a>
-    <a href="/Kanbas/Inbox" class="list-group-item list-group-item-action">Inbox</a>
-    <a href="/Kanbas/History" class="list-group-item list-group-item-action">History</a>
-    <a href="/Kanbas/Studio" class="list-group-item list-group-item-action">Studio</a>
-    <a href="/Kanbas/Help" class="list-group-item list-group-item-action">Help</a>
-  </div> -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="../../lib/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="../kanbas.css" />
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module">
+      import KanbasNavigation from "./KanbasNavigation.js";
+      document.getElementById("root").innerHTML = KanbasNavigation();
+    </script>
+  </body>
+</html>
