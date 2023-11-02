@@ -23,11 +23,10 @@ function KanbasNavigation() {
     "Commons",
     "Help",
   ];
-
   const linkToIconMap = {
-    Account: <BiUserCircle className="wd-icon" style={{ fontSize: "2.7em" }} />,
+    Account: <BiUserCircle className="wd-icon" style={{ fontSize: "2.4em" }} />,
     Dashboard: (
-      <AiOutlineDashboard className="wd-icon" style={{ fontSize: "2.7em" }} />
+      <AiOutlineDashboard className="wd-icon" style={{ fontSize: "2.4em" }} />
     ),
     Courses: <FaBook className="wd-icon" />,
     Calendar: <BsFillCalendar2WeekFill className="wd-icon" />,
@@ -48,9 +47,7 @@ function KanbasNavigation() {
       <BsQuestionCircleFill className="wd-icon" style={{ fontSize: "2.4em" }} />
     ),
   };
-
   const { pathname } = useLocation();
-
   return (
     <div
       className="list-group wd-kanbas-navigation position-fixed"
@@ -74,5 +71,4 @@ function KanbasNavigation() {
     </div>
   );
 }
-
 export default KanbasNavigation;
