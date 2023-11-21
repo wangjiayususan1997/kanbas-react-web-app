@@ -8,12 +8,23 @@ import Grades from "./Grades";
 import { Link } from "react-router-dom";
 import { IoReorderThreeOutline } from "react-icons/io5";
 import "./index.css";
+import { useState, useEffect } from "react";
+import axios from "axios";
 
-function Courses({ courses }) {
+function Courses() {
   const { pathname } = useLocation();
   const [root, kanbas, courseName, id, screen] = pathname.split("/");
   const { courseId } = useParams();
-  const course = courses.find((course) => course._id === courseId);
+  const [course, setCourse] = useState({});
+  const URL = "http://localhost:4000/api/courses";
+  const findCourseById = async (courseId) => {
+    const response = await axios.get(`${URL}/${courseId}`);
+    setCourse(response.data);
+  };
+  useEffect(() => {
+    findCourseById(courseId);
+  }, [courseId]);
+  // const course = courses.find((course)=> course._id === courseId);
   return (
     <div className="ms-4">
       <h1 className="breadCrumb fw-light">
@@ -38,7 +49,7 @@ function Courses({ courses }) {
               path="Home"
               element={
                 <h1>
-                  <Home courses={courses} />
+                  <Home course={course} />
                 </h1>
               }
             />

@@ -8,6 +8,7 @@ import {
   updateAssignment,
   resetAssignment,
 } from "../assignmentsReducer";
+import * as client from "../client.js";
 
 function AssignmentEditor() {
   const assignment = useSelector(
@@ -20,6 +21,15 @@ function AssignmentEditor() {
     navigate(`/Kanbas/Courses/${courseId}/Assignments`);
   };
   const dispatch = useDispatch();
+  const handleAddAssignment = () => {
+    client.createAssignment(courseId, assignment).then((assignment) => {
+      dispatch(addAssignment(assignment));
+    });
+  };
+  const handleUpdateAssignment = async () => {
+    const status = await client.updateAssignment(assignment);
+    dispatch(updateAssignment(assignment));
+  };
   const [text, setText] = useState("New Assignment Description");
   return (
     <div>
@@ -116,9 +126,9 @@ function AssignmentEditor() {
           <button
             onClick={() => {
               if (assignment._id === undefined) {
-                dispatch(addAssignment({ ...assignment, course: courseId }));
+                handleAddAssignment();
               } else {
-                dispatch(updateAssignment(assignment));
+                handleUpdateAssignment(assignment);
               }
               handleSave();
             }}
