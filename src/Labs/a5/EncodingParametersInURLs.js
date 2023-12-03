@@ -13,13 +13,13 @@ function EncodingParametersInURLs() {
   };
   const fetchSubtraction = async (a, b) => {
     const response = await axios.get(
-      `http://localhost:4000/a5/subtract/${a}/${b}`
+      `https://kanbas-node-server-app-sl11.onrender.com/a5/subtract/${a}/${b}`
     );
     setResult(response.data);
   };
   const [welcome, setWelcome] = useState("");
   const fetchWelcome = async () => {
-    const response = await axios.get("http://localhost:4000/a5/welcome");
+    const response = await axios.get(`${HOST_URL}/welcome`);
     setWelcome(response.data);
   };
   useEffect(() => {
