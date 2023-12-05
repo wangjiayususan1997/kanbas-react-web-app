@@ -16,7 +16,7 @@ function Courses() {
   const [root, kanbas, courseName, id, screen] = pathname.split("/");
   const { courseId } = useParams();
   const [course, setCourse] = useState({});
-  const URL = "http://localhost:4000/api/courses";
+  const URL = "https://kanbas-node-server-app-a6-hdh4.onrender.com/api/courses";
   const findCourseById = async (courseId) => {
     const response = await axios.get(`${URL}/${courseId}`);
     setCourse(response.data);
